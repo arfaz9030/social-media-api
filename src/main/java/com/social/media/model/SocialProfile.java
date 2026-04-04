@@ -1,10 +1,16 @@
-package com.social.media;
+package com.social.media.model;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 // @Entity tells JPA/Hibernate that this class should be mapped
 // to a database table. By default the table name will be "social_profile".
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class SocialProfile {
 
     // Primary key of the social_profile table.

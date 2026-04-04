@@ -1,16 +1,22 @@
-package com.social.media;
+package com.social.media.model;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.HashSet;
 import java.util.Set;
 
 @Entity
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class SocialGroup {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
     // Many groups can contain many users.
 //
@@ -26,6 +32,5 @@ public class SocialGroup {
 // Group: Java Developers
 // Users: Arfaz, Ahmed, Rahul
     private Set<SocialUser> socialUser = new HashSet<>();
-
 
 }

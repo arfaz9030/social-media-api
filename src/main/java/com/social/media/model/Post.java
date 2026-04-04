@@ -1,8 +1,14 @@
-package com.social.media;
+package com.social.media.model;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 // @Entity tells JPA/Hibernate that this class represents
 // a database table. By default the table name will be "post".
 public class Post {
@@ -48,10 +54,5 @@ public class Post {
     // of the relationship because it maintains the foreign key.
     @JoinColumn(name = "social_user_id")
     private SocialUser socialUser;
-
-
-
-
-
 
 }
