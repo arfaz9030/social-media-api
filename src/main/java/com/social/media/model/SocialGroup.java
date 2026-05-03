@@ -31,6 +31,6 @@ public class SocialGroup {
 // Example:
 // Group: Java Developers
 // Users: Arfaz, Ahmed, Rahul
-    private Set<SocialUser> socialUser = new HashSet<>();
+    private Set<SocialUser> socialUsers = new HashSet<>();
 
 }
